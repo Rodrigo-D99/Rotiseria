@@ -21,7 +21,7 @@ class CategoriesModel{
     function delete($id){
         try{
             $query = $this->db->prepare('DELETE FROM categories WHERE id_category =?');
-        $query->execute(array($id));
+            $query->execute(array($id));
         }
         catch(PDOException $e) {
             error_log('PDO Exception: '.$e->getMessage());
