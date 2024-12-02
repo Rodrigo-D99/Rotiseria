@@ -3,7 +3,8 @@
     require_once './app/controllers/auth.controller.php';
     require_once './app/controllers/categories.controller.php';
 
-    define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+    define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
+    . dirname($_SERVER['PHP_SELF']).'/');
     define('PRODUCTS', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/products');
     define('CATEGORIES', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/categories');
 
@@ -16,6 +17,7 @@
     $params = explode('/', $action);
 
     switch($params[0]){
+        
         case '':
             $prodController = new ProdController();
             $prodController->showHome();
